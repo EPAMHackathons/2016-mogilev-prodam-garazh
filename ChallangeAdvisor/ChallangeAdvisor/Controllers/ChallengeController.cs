@@ -28,12 +28,7 @@ namespace ChallangeAdvisor.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-        [Route("GetChallengeByUser")]
-        [HttpGet]
-        public IEnumerable<string> GetChallengeByUser(string nickname)
-        {
-            return new string[] { "value1", "value2" };
-        }
+
         [Route("GetChallengeStories")]
         [HttpGet]
         public IEnumerable<string> GetChallengeStories()
