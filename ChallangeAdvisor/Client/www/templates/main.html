@@ -1,5 +1,11 @@
 <ion-view view-title="Main">
   <ion-content>
-    <h1>Main</h1>
+  	<div class="list">
+	  	<a class="item item-thumbnail-left" ng-repeat="post in postList" href="#/app/">
+			<img src="{{post.ImageLink}}">
+	  		<h2>{{post.Title}}</h2>
+	  		<p>{{post.Author.Name}}</p>
+	  	</a>
+  	</div>
   </ion-content>
 </ion-view>
