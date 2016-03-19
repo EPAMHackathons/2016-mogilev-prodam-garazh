@@ -7,15 +7,21 @@ using System.Web.Http;
 
 namespace ChallangeAdvisor.Controllers
 {
+    [RoutePrefix("api/Profile")]
     public class ProfileController : ApiController
     {
-        public void GetProfile()
+        
+        [Route("GetProfile")]
+        [HttpGet]
+        public IEnumerable<string> GetProfile(int? userId)
         {
-
+            return new string[] { "value1", "value2" };
         }
-        public void SaveProfile()
+        [Route("SaveProfile")]
+        [HttpGet]
+        public IEnumerable<string> SaveProfile()
         {
-
+            return new string[] { "value1", "value2" };
         }
     }
 }
