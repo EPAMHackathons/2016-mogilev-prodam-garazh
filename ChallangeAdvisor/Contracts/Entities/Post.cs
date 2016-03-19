@@ -25,8 +25,6 @@ namespace Contracts.Entities
 
 		public double Longitude { get; set; }
 
-		public IList<Tag> Tags { get; set; }
-
 		public IList<Story> Stories { get; set; }
 
 		public IList<PostTag> PostsTags { get; set; }
