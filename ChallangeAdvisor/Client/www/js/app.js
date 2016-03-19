@@ -23,43 +23,43 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+	$stateProvider
 
-    .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
+	  .state('app', {
+	  	url: '/app',
+	  	abstract: true,
+	  	templateUrl: 'templates/menu.html',
+	  	controller: 'AppCtrl'
+	  })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html',
-        controller: 'SearchCtrl'
-      }
-    }
-  })
-	  .state('app.main', {
-	  	url: '/main',
-	  	views: {
-	  		'menuContent': {
-	  			templateUrl: 'templates/main.html',
-                controller: 'mainCtrl'
-	  		}
-	  	}
-	  })
-  	  .state('app.story', {
-	  	url: '/story',
-	  	views: {
-	  		'menuContent': {
-	  			templateUrl: 'templates/story.html'
-	  		}
-	  	}
-	  })
+	.state('app.search', {
+		url: '/search',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/search.html',
+				controller: 'SearchCtrl'
+			}
+		}
+	})
+		.state('app.main', {
+			url: '/main',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/main.html',
+					controller: 'mainCtrl'
+				}
+			}
+		})
+		.state('app.story', {
+			url: '/story',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/story.html'
+				}
+			}
+		})
   
-    .state('app.profile', {
+	  .state('app.profile', {
 	  	url: '/profile',
 	  	views: {
 	  		'menuContent': {
@@ -67,11 +67,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	  		}
 	  	}
 	  })
-      .state('app.challenge', {
-      	url: '/challenge',
-	  	views: {
-	  		'menuContent': {
-	  			templateUrl: 'templates/challenge.html'
+		.state('app.challenge', {
+			url: '/challenge/:id',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/challenge.html',
+					controller: 'ChallengeCtrl'
 	  		}
 	  	}
 	  })
