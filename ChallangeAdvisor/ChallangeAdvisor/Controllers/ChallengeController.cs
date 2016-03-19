@@ -29,7 +29,7 @@ namespace ChallangeAdvisor.Controllers
                 new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
 
             };
- 
+
             return Json(model);
         }
         [Route("GetRemainingChallenges")]
@@ -44,9 +44,14 @@ namespace ChallangeAdvisor.Controllers
         {
             ChallengeDetailViewModel model = new ChallengeDetailViewModel()
             {
-                 Title = "Title",
-                  Author= "Author", Description= "description", ImagesLink= "http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",
-                Latitude =50 , Longitude=50, PostId= 5, Stories= new List<StoryListItemViewModel>() { new StoryListItemViewModel() { StoryId = 1, Title="Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } },
+                Title = "Title",
+                Author = "Author",
+                Description = "description",
+                ImagesLink = "http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",
+                Latitude = 50,
+                Longitude = 50,
+                PostId = 5,
+                Stories = new List<StoryListItemViewModel>() { new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } },
                 Tags = new string[] { "tag", "tag", "tag" }
             };
             return Json(model);
@@ -65,11 +70,11 @@ namespace ChallangeAdvisor.Controllers
 
         }
         [Route("CreateChallenge")]
-        [HttpGet]
+        [HttpPost]
         public void CreateChallenge()
         {
 
         }
-        
+
     }
 }

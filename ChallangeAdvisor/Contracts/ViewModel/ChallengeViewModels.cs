@@ -41,7 +41,7 @@ namespace Contracts.ViewModel
         public double Longitude { get; set; }
 
     }
-    class ChallengeSaveViewModel
+    public class ChallengeSaveViewModel
     {
         public int ChallengeId { get; set; }
         public string Title { get; set; }
