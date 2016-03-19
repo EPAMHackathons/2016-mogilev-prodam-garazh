@@ -41,6 +41,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 			}
 		}
 	})
+    .state('app.searchByTags', {
+      url: '/search/searchByTag',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/searchByTag.html',
+          controller: 'SearchCtrl'
+        }
+      }
+    })
+    .state('app.searchByLocation', {
+      url: '/search/searchByLocation',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/searchByLocation.html',
+          controller: 'SearchCtrl'
+        }
+      }
+    })
 		.state('app.main', {
 			url: '/main',
 			views: {
@@ -80,7 +98,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       	url: '/addChallenge',
 	  	views: {
 	  		'menuContent': {
-	  			templateUrl: 'templates/addChallenge.html'
+	  		  templateUrl: 'templates/addChallenge.html'
 	  		}
 	  	}
 	  })
