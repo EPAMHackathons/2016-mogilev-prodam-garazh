@@ -16,7 +16,6 @@ namespace ChallangeAdvisor.Controllers
     {
         [Route("GetChallenges")]
         [HttpGet]
-        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public JsonResult<List<ChallengeBreifViewModel>> GetChallenges()
         {
             List<ChallengeBreifViewModel> model = new List<ChallengeBreifViewModel>()
