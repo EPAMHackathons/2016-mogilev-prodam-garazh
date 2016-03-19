@@ -40,7 +40,7 @@ namespace ChallangeAdvisor.Controllers
         }
         [Route("GetChallenge")]
         [HttpGet]
-        public JsonResult<ChallengeDetailViewModel> GetChallenge()
+        public JsonResult<ChallengeDetailViewModel> GetChallenge(int id)
         {
             ChallengeDetailViewModel model = new ChallengeDetailViewModel()
             {
@@ -71,7 +71,7 @@ namespace ChallangeAdvisor.Controllers
         }
         [Route("CreateChallenge")]
         [HttpPost]
-        public void CreateChallenge()
+        public void CreateChallenge(ChallengeAddViewModel model)
         {
 
         }
