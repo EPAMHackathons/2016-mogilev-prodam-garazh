@@ -52,7 +52,32 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function ($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('mainCtrl', function ($scope) {
+	$scope.postList = [
+		{
+			Title: "Aasdasd",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink : "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{Title: "abc", Id: "123"}]
+		},
+		{
+			Title: "Aasdas",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{ Title: "abc", Id: "123" }]
+		},
+		{
+			Title: "Aasdas",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{ Title: "abc", Id: "123" }]
+		}, ];
 })
 
 .controller('SearchCtrl', function ($scope) {
