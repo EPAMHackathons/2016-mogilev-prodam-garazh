@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="www\templates\addChallenge.html" />
+    <Content Include="www\templates\addStory.html" />
+    <Content Include="www\templates\challenge.html" />
+    <Content Include="www\templates\profile.html" />
+    <Content Include="www\templates\story.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -64,6 +69,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="www\js\mainController.js" />
+    <Content Include="www\js\storyController.js" />
     <Content Include="www\README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -73,7 +79,6 @@
     <Content Include="www\index.html" />
     <Content Include="www\js\app.js" />
     <Content Include="www\js\controllers.js" />
-    <Content Include="www\templates\browse.html" />
     <Content Include="www\templates\login.html" />
     <Content Include="www\templates\main.html" />
     <Content Include="www\templates\menu.html" />
