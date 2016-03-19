@@ -40,6 +40,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+	  .state('app.main', {
+	  	url: '/main',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/main.html'
+	  		}
+	  	}
+	  })
 
   .state('app.browse', {
       url: '/browse',
@@ -49,6 +57,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    
     .state('app.playlists', {
       url: '/playlists',
       views: {
