@@ -19,6 +19,8 @@ namespace Contracts.Entities
 
 		public bool Approved { get; set; }
 
-		public ComplitionStatuse.Status CompletionStatus { get; set; }
+		public Enums.CompletionStatus CompletionStatus { get; set; }
+
+		public IList<Content> ContentCollection { get; set; }
 	}
 }

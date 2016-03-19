@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Contracts.Entities
 {
-	public class Tag
+	public class Content
 	{
 		public int Id { get; set; }
 
-		public string Name { get; set; }
+		public string Address { get; set; }
 
-		public IList<PostTag> PostsTags { get; set; }
+		public Enums.ContentType Type { get; set; }
 	}
 }

@@ -10,6 +10,7 @@ namespace ChallangeAdvisor.Controllers
     [RoutePrefix("api/Story")]
     public class StoryController : ApiController
     {
+        
         [Route("GetStory")]
         [HttpGet]
         public IEnumerable<string> GetStory(int storyId)

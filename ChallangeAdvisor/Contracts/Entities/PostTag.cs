@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Contracts.Entities
 {
-	public static class ComplitionStatuse
+	public class PostTag
 	{
-		public enum Status
-		{
-			Completed,
-			Pending,
-			Claimed
-		}
+		public int Id { get; set; }
+		public IList<Tag> Tags { get; set; }
+
+		public IList<Post> Posts { get; set; }
 	}
 }
