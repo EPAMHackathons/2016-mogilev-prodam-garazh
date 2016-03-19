@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
+using System.Web.Http.Cors;
 
 namespace ChallangeAdvisor.Controllers
 {
@@ -15,6 +16,7 @@ namespace ChallangeAdvisor.Controllers
     {
         [Route("GetChallenges")]
         [HttpGet]
+        [EnableCors(origins: "http://localhost:49792", headers: "*", methods: "*")]
         public JsonResult<List<ChallengeBreifViewModel>> GetChallenges()
         {
             List<ChallengeBreifViewModel> model = new List<ChallengeBreifViewModel>()
