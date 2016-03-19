@@ -1,5 +1,64 @@
 <ion-view view-title="Challenge">
-  <ion-content>
-    <h1>Main</h1>
-  </ion-content>
+	<ion-content>
+		<span class="title-text">Sea surfing</span>
+		<img src="https://www.disruptsurfing.com/wp-content/uploads/2016/01/Surf-1.jpg" class="header-img" />
+		<div class="challenge-content">
+			<button class="button button-full button-assertive" href="#/app/story">
+				Accept this challenge!
+			</button>
+		</div>
+		<div class="challenge-content">
+			<button class="button button-clear button-positive">
+				#Surfing
+			</button>
+			<button class="button button-clear button-positive">
+				#Diving
+			</button>
+			<button class="button button-clear button-positive">
+				#Sea
+			</button>
+			<button class="button button-clear button-positive">
+				#Fun
+			</button>
+		</div>
+
+		<ion-slide-box on-slide-changed="slideHasChanged($index)">
+			<ion-slide>
+				<div class="box">
+					<img src="http://www.xtremespots.com/wp-content/uploads/2013/07/BASE-Jumping-at-Navagio-Beach1.jpg" />
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box">
+					<img src="https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg" />
+				</div>
+			</ion-slide>
+			<ion-slide>
+				<div class="box">
+					<img src="https://www.disruptsurfing.com/wp-content/uploads/2016/01/Surf-1.jpg" />
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+		<div class="challenge-content">
+			<div class="list">
+
+				<div class="item item-divider">
+					Top stories
+				</div>
+
+				<a class="item" href="#/app/story">
+					It was cool
+					<span class="badge badge-assertive">22</span>
+				</a>
+				<a class="item" href="#/app/story">
+					Funny surfing
+					<span class="badge badge-assertive">7</span>
+				</a>
+				<a class="item" href="#/app/story">
+					Feed fish
+					<span class="badge badge-assertive">10</span>
+				</a>
+			</div>
+		</div>
+	</ion-content>
 </ion-view>

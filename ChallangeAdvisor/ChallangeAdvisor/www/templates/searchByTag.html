@@ -1,0 +1,19 @@
+﻿
+<ion-view view-title="Search by Tags">
+
+    </ion-nav-bar>
+
+    <ion-content>
+
+        <ion-list>
+            <ion-checkbox ng-repeat="tag in tags">{{tag.title}}</ion-checkbox>
+
+        </ion-list>
+
+
+
+    </ion-content>
+    <div class="bar bar-footer bar-positive" ng-click="tags.search()">
+        <div class="title">Search</div>
+    </div>
+</ion-view>

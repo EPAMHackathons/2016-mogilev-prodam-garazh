@@ -1,9 +1,9 @@
-<ion-view view-title="Main">
+<ion-view view-title="Challenge advisor">
   <ion-content>
   	<div class="list card" ng-repeat="post in postList">
 
   		<div class="item item-avatar">
-  			<img src="{{post.Author.AvatarLink}}">
+		  	<img src="{{post.AvatarLink}}">
   			<h2>{{post.Title}}</h2>
 		  	<p>{{post.Author}}</p>
   		</div>
@@ -15,7 +15,7 @@
   			</p>
   			<p>
   				<a href="#" class="subdued">1 Like</a>
-  				<a href="#" class="subdued">5 Comments</a>
+  				<a href="#" class="subdued">10 Completions</a>
 				<a href="#/app/challenge/{{post.Id}}">Learn more</a>
   			</p>
   		</div>

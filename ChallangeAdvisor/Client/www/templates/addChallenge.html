@@ -1,5 +1,23 @@
 <ion-view view-title="Challenge">
   <ion-content>
-    <h1>Main</h1>
+  	<div class="list">
+  		<label class="item item-input item-stacked-label">
+  			<span class="input-label">Title</span>
+  			<input type="text" placeholder="title">
+  		</label>
+  		<label class="item item-input item-stacked-label">
+  			<span class="input-label">Post description</span>
+  			<input type="text" placeholder="description">
+  		</label>
+  		<label class="item item-input item-stacked-label">
+  			<span class="input-label">Story tags here</span>
+  			<input type="text" placeholder="Tags">
+  		</label>
+  	</div>
+  	<ion-footer-bar align-title="center" class="bar-assertive">
+  		<a menu-close href="#/app/addChallenge">
+  			<h1 class="title">Create your challenge!</h1>
+  		</a>
+  	</ion-footer-bar>
   </ion-content>
 </ion-view>

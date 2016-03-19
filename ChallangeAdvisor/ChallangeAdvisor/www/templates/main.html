@@ -1,0 +1,25 @@
+<ion-view view-title="Challenge advisor">
+  <ion-content>
+  	<div class="list card" ng-repeat="post in postList">
+
+  		<div class="item item-avatar">
+		  	<img src="{{post.AvatarLink}}">
+  			<h2>{{post.Title}}</h2>
+		  	<p>{{post.Author}}</p>
+  		</div>
+
+  		<div class="item item-body">
+		  	<img class="full-image" src="{{post.ImageLink}}">
+  			<p>
+				{{post.Description}}
+  			</p>
+  			<p>
+  				<a href="#" class="subdued">1 Like</a>
+  				<a href="#" class="subdued">5 Comments</a>
+				<a href="#/app/challenge/{{post.Id}}">Learn more</a>
+  			</p>
+  		</div>
+
+  	</div>
+  </ion-content>
+</ion-view>

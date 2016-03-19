@@ -32,7 +32,7 @@ namespace ChallangeAdvisor.Controllers
  
             return Json(model);
         }
-        [Route("GetRemainingChallenges")]
+        [Route("GetRemainingChallenges"), ]
         [HttpGet]
         public IEnumerable<string> GetRemainingChallenges(int page)
         {

@@ -1,7 +1,6 @@
 angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function ($scope, $ionicModal, $timeout) {
-
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -56,29 +55,41 @@ angular.module('starter.controllers', [])
 })
 
 .controller('mainCtrl', function ($scope, $http) {
-	var result = $http.get("http://localhost:49792/api/challenge/getchallenges").then(function (data) { console.log(data)})
+	$http({
+		method: 'GET',
+		url: '/api/challenge/getchallenges',
+		withCredentials: false,
+		headers: {
+			'Content-Type': 'application/json; charset=utf-8',
+			'Access-Control-Allow-Origin': '*'
+		}
+	}).then(function (data) { console.log(data) })
+
 	$scope.postList = [
 		{
 			Id:1,
-			Title: "Aasdasd",
+			Title: "Post title",
 			Tags: ["hash1", "hash2", "hash3"],
-			Author: "as",
-			ImageLink : "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Author: "John Doe",
+			AvatarLink : 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png',
+			ImageLink: "https://www.disruptsurfing.com/wp-content/uploads/2016/01/Surf-1.jpg",
 			Stories: [{Title: "abc", Id: "123"}]
 		},
 		{
 			Id: 2,
-			Title: "Aasdas",
+			Title: "Title",
 			Tags: ["hash1", "hash2", "hash3"],
-			Author: "as",
-			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Author: "User Name",
+			AvatarLink: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png',
+			ImageLink: "http://www.xtremespots.com/wp-content/uploads/2013/07/BASE-Jumping-at-Navagio-Beach1.jpg",
 			Stories: [{ Title: "abc", Id: "123" }]
 		},
 		{
 			Id: 3,
-			Title: "Aasdas",
+			Title: "Challenge name",
 			Tags: ["hash1", "hash2", "hash3"],
-			Author: "as",
+			Author: "Chuck Norris",
+			AvatarLink: 'https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png',
 			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
 			Stories: [{ Title: "abc", Id: "123" }]
 		}, ];
