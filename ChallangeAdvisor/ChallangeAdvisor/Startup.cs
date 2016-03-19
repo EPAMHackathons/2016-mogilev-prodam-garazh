@@ -1,20 +1,20 @@
-﻿using Microsoft.Owin;
-using Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿//using Microsoft.Owin;
+//using Owin;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Web;
 
 
-[assembly: OwinStartup(typeof(ChallangeAdvisor.Startup))]
+//[assembly: OwinStartup(typeof(ChallangeAdvisor.Startup))]
 
-namespace ChallangeAdvisor
-{
-    public partial class Startup
-    {
-        public void Configuration(IAppBuilder app)
-        {
-            ConfigureAuth(app);
-        }
-    }
-}
+//namespace ChallangeAdvisor
+//{
+//    public partial class Startup
+//    {
+//        public void Configuration(IAppBuilder app)
+//        {
+//            ConfigureAuth(app);
+//        }
+//    }
+//}

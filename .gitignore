@@ -244,3 +244,10 @@ paket-files/
 .idea/
 *.sln.iml
 ChallangeAdvisor/ChallangeAdvisor/ChallangeAdvisor.csproj.rej
+ChallangeAdvisor/BusinessOperations/BusinessOperations.csproj
+ChallangeAdvisor/Client/Client.csproj
+ChallangeAdvisor/Client/Web.config
+ChallangeAdvisor/Contracts/Contracts.csproj
+ChallangeAdvisor/ChallangeAdvisor/ChallangeAdvisor.csproj
+ChallangeAdvisor/ChallangeAdvisor/ConnectionStrings.config
+ChallangeAdvisor/DataAccess/DataAccess.csproj
