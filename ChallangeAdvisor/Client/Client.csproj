@@ -63,6 +63,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="www\js\mainController.js" />
     <Content Include="www\README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +75,7 @@
     <Content Include="www\js\controllers.js" />
     <Content Include="www\templates\browse.html" />
     <Content Include="www\templates\login.html" />
+    <Content Include="www\templates\main.html" />
     <Content Include="www\templates\menu.html" />
     <Content Include="www\templates\playlist.html" />
     <Content Include="www\templates\playlists.html" />
