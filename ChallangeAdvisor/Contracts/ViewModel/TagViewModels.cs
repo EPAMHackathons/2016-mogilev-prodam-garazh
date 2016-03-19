@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-	class TagViewModels
-	{
-	}
+    class TagViewModel
+    {
+        public int TagId { get; set; }
+        public int Name { get; set; }
+        public int Bool { get; set; }
+    }
 }

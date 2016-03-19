@@ -55,9 +55,11 @@ angular.module('starter.controllers', [])
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
 
-.controller('mainCtrl', function ($scope) {
+.controller('mainCtrl', function ($scope, $http) {
+	var result = $http.get("http://localhost:49792/api/challenge/getchallenges").then(function (data) { console.log(data)})
 	$scope.postList = [
 		{
+			Id:1,
 			Title: "Aasdasd",
 			Tags: ["hash1", "hash2", "hash3"],
 			Author: "as",
@@ -65,6 +67,7 @@ angular.module('starter.controllers', [])
 			Stories: [{Title: "abc", Id: "123"}]
 		},
 		{
+			Id: 2,
 			Title: "Aasdas",
 			Tags: ["hash1", "hash2", "hash3"],
 			Author: "as",
@@ -72,6 +75,7 @@ angular.module('starter.controllers', [])
 			Stories: [{ Title: "abc", Id: "123" }]
 		},
 		{
+			Id: 3,
 			Title: "Aasdas",
 			Tags: ["hash1", "hash2", "hash3"],
 			Author: "as",
@@ -95,6 +99,29 @@ angular.module('starter.controllers', [])
   ];
 
   $scope.tags.search = function () { console.log("search") };
+})
+
+.controller('ChallengeCtrl', function ($scope, $stateParams) {
+	console.log($stateParams.id);
+})
+
+.controller('MapCtrl', function ($scope, $state) {
+  var options = { timeout: 10000, enableHighAccuracy: true };
+
+  function pos() {
+
+    var latLng = new google.maps.LatLng(55.7558260, 37.6173000);
+
+    var mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  };
+  pos();
 });
 
 
