@@ -5,13 +5,13 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
+//using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using Auth.Providers;
-using Auth.Models;
+using ChallangeAdvisor.Providers;
+using ChallangeAdvisor.Models;
 
-namespace Auth
+namespace ChallangeAdvisor
 {
     public partial class Startup
     {
