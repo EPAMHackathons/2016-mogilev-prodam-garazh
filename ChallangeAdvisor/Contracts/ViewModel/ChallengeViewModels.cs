@@ -13,7 +13,7 @@ namespace Contracts.ViewModel
         public string Author { get; set; }
         public string[] Tags { get; set; }
     }
-    class ChallengeDetailViewModel
+    public class ChallengeDetailViewModel
     {
         public int Postid { get; set; }
         public string Title { get; set; }
@@ -52,7 +52,7 @@ namespace Contracts.ViewModel
         public string Story { get; set; }
         public int StoryId { get; set; }
         public int Status { get; set; } // complete
-        public string Author { get; set; }
+        public Guid Author { get; set; }
         public int[] TagsId { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }

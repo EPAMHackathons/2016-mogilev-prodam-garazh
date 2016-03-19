@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
 
 namespace ChallangeAdvisor.Controllers
 {
@@ -13,24 +14,23 @@ namespace ChallangeAdvisor.Controllers
     {
         [Route("GetChallenges")]
         [HttpGet]
-        public IEnumerable<ChallengeBreifViewModel> GetChallenges()
+        public JsonResult<List<ChallengeBreifViewModel>> GetChallenges()
         {
             List<ChallengeBreifViewModel> model = new List<ChallengeBreifViewModel>()
             {
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
-                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
+                new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
 
             };
-            return model;
+ 
+            return Json(model);
         }
         [Route("GetRemainingChallenges")]
         [HttpGet]
