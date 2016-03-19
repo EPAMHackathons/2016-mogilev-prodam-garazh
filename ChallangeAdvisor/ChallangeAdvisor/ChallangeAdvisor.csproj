@@ -244,6 +244,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessOperations\BusinessOperations.csproj">
+      <Project>{2000c627-5497-4060-8eca-02e4c5300dc4}</Project>
+      <Name>BusinessOperations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Contracts\Contracts.csproj">
       <Project>{adca01bb-3fd1-4e9c-ad5b-7448e047853f}</Project>
       <Name>Contracts</Name>

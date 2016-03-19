@@ -1,4 +1,5 @@
-﻿using Contracts.ViewModel;
+﻿using BusinessOperations;
+using Contracts.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -73,7 +74,8 @@ namespace ChallangeAdvisor.Controllers
         [HttpPost]
         public void CreateChallenge(ChallengeAddViewModel model)
         {
-
+            ChallengeMapping mapping = ChallengeMapping.GetInstance();
+            bool status = mapping.AddNewChallange(model);
         }
 
     }
