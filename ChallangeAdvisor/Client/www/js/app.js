@@ -6,8 +6,8 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
 
-.run(function ($ionicPlatform) {
-  $ionicPlatform.ready(function () {
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -22,94 +22,78 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
 })
 
-.config(function ($stateProvider, $urlRouterProvider) {
-  $stateProvider
+.config(function($stateProvider, $urlRouterProvider) {
+	$stateProvider
 
-    .state('app', {
-      url: '/app',
-      abstract: true,
-      templateUrl: 'templates/menu.html',
-      controller: 'AppCtrl'
-    })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html',
-        controller: 'SearchCtrl'
-      }
-    }
-  })
-    .state('app.searchByTag', {
-      url: '/search/searchByTag',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/searchByTag.html',
-          controller: 'SearchCtrl'
-        }
-      }
-    })
-    .state('app.searchByLocation', {
-      url: '/search/searchByLocation',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/searchByLocation.html',
-          controller: 'MapCtrl'
-        }
-      }
-    })
-	  .state('app.main', {
-	    url: '/main',
-	    views: {
-	      'menuContent': {
-	        templateUrl: 'templates/main.html'
-	      }
-	    }
+	  .state('app', {
+	  	url: '/app',
+	  	abstract: true,
+	  	templateUrl: 'templates/menu.html',
+	  	controller: 'AppCtrl'
 	  })
-  	  .state('app.story', {
-  	    url: '/story',
-  	    views: {
-  	      'menuContent': {
-  	        templateUrl: 'templates/story.html'
-  	      }
-  	    }
-  	  })
 
-    .state('app.profile', {
-      url: '/profile',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/profile.html'
-        }
-      }
-    })
-      .state('app.challenge', {
-        url: '/challenge',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/challenge.html'
-          }
-        }
-      })
+	.state('app.search', {
+		url: '/search',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/search.html',
+				controller: 'SearchCtrl'
+			}
+		}
+	})
+		.state('app.main', {
+			url: '/main',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/main.html',
+					controller: 'mainCtrl'
+				}
+			}
+		})
+		.state('app.story', {
+			url: '/story',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/story.html'
+				}
+			}
+		})
+  
+	  .state('app.profile', {
+	  	url: '/profile',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/profile.html'
+	  		}
+	  	}
+	  })
+		.state('app.challenge', {
+			url: '/challenge/:id',
+			views: {
+				'menuContent': {
+					templateUrl: 'templates/challenge.html',
+					controller: 'ChallengeCtrl'
+	  		}
+	  	}
+	  })
       .state('app.addChallenge', {
-        url: '/addChallenge',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/addChallenge.html'
-          }
-        }
-      })
+      	url: '/addChallenge',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/addChallenge.html'
+	  		}
+	  	}
+	  })
       .state('app.addStory', {
-        url: '/addStory',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/addStory.html'
-          }
-        }
-      })
-
-
+      	url: '/addStory',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/addStory.html'
+	  		}
+	  	}
+	  })
+  
+  
     .state('app.playlists', {
       url: '/playlists',
       views: {
