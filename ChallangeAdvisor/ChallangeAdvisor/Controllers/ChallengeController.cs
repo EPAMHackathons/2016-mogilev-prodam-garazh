@@ -1,4 +1,5 @@
-﻿using Contracts.ViewModel;
+﻿using BusinessOperations;
+using Contracts.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
+using System.Web.Http.Cors;
 
 namespace ChallangeAdvisor.Controllers
 {
@@ -29,7 +31,7 @@ namespace ChallangeAdvisor.Controllers
                 new ChallengeBreifViewModel() { Author="unnamed", Description="fissh text", AvatarLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",ImageLink="http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg", Tags = new string[] {"tag","tag","tag"} },
 
             };
- 
+
             return Json(model);
         }
         [Route("GetRemainingChallenges"), ]
@@ -40,13 +42,18 @@ namespace ChallangeAdvisor.Controllers
         }
         [Route("GetChallenge")]
         [HttpGet]
-        public JsonResult<ChallengeDetailViewModel> GetChallenge()
+        public JsonResult<ChallengeDetailViewModel> GetChallenge(int id)
         {
             ChallengeDetailViewModel model = new ChallengeDetailViewModel()
             {
-                 Title = "Title",
-                  Author= "Author", Description= "description", ImagesLink= "http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",
-                Latitude =50 , Longitude=50, PostId= 5, Stories= new List<StoryListItemViewModel>() { new StoryListItemViewModel() { StoryId = 1, Title="Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } },
+                Title = "Title",
+                Author = "Author",
+                Description = "description",
+                ImagesLink = "http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",
+                Latitude = 50,
+                Longitude = 50,
+                PostId = 5,
+                Stories = new List<StoryListItemViewModel>() { new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } },
                 Tags = new string[] { "tag", "tag", "tag" }
             };
             return Json(model);
@@ -65,11 +72,12 @@ namespace ChallangeAdvisor.Controllers
 
         }
         [Route("CreateChallenge")]
-        [HttpGet]
-        public void CreateChallenge()
+        [HttpPost]
+        public void CreateChallenge(ChallengeAddViewModel model)
         {
-
+            ChallengeMapping mapping = ChallengeMapping.GetInstance();
+            bool status = mapping.AddNewChallange(model);
         }
-        
+
     }
 }

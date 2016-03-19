@@ -12,9 +12,9 @@ namespace DataAccess
 	public class EventContext : DbContext
 	{
 		public EventContext()
-			: base("ConnectionString")
+			: base("ConnectionStringAzure")
 		{
-			Database.SetInitializer(new MigrateDatabaseToLatestVersion<EventContext, Configurations>("ConnectionString"));
+			Database.SetInitializer(new MigrateDatabaseToLatestVersion<EventContext, Configurations>("ConnectionStringAzure"));
 		}
 
 		public DbSet<Post> Posts { get; set; }

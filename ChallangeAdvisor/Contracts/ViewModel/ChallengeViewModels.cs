@@ -26,7 +26,7 @@ namespace Contracts.ViewModel
         public double Longitude { get; set; }
         public List<StoryListItemViewModel> Stories { get; set; }
     }
-    class ChallengeAddViewModel
+   public class ChallengeAddViewModel
     {
         public string Title { get; set; }
         public string ImageLink { get; set; }
@@ -35,13 +35,13 @@ namespace Contracts.ViewModel
         public string[] VideosLink { get; set; }
         public string Story { get; set; }
         public int Status { get; set; } // complete
-        public string Author { get; set; }
+        public int Author { get; set; }
         public int[] TagsId { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
     }
-    class ChallengeSaveViewModel
+    public class ChallengeSaveViewModel
     {
         public int ChallengeId { get; set; }
         public string Title { get; set; }
