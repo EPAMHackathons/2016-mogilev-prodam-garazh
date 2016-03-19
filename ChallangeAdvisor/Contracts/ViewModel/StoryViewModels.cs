@@ -8,5 +8,7 @@ namespace Contracts.ViewModel
 {
     public class StoryListItemViewModel
     {
+        public int StoryId { get; set; }
+        public string Title{ get; set; }
     }
 }

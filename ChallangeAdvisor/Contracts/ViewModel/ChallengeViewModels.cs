@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-   public class ChallengeBreifViewModel
+    public class ChallengeBreifViewModel
     {
         public string ImageLink { get; set; }
         public string Description { get; set; }
@@ -16,16 +16,15 @@ namespace Contracts.ViewModel
     }
     public class ChallengeDetailViewModel
     {
-        public int Postid { get; set; }
+        public int PostId { get; set; }
         public string Title { get; set; }
         public string ImagesLink { get; set; }
-        public string VideosLink { get; set; }
         public string Description { get; set; }
         public string Author { get; set; }
         public string[] Tags { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-        public StoryListItemViewModel Stories { get; set; }
+        public List<StoryListItemViewModel> Stories { get; set; }
     }
     class ChallengeAddViewModel
     {

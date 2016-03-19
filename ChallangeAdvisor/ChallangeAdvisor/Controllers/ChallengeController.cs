@@ -40,9 +40,16 @@ namespace ChallangeAdvisor.Controllers
         }
         [Route("GetChallenge")]
         [HttpGet]
-        public IEnumerable<string> GetChallenge(int challengeId)
+        public JsonResult<ChallengeDetailViewModel> GetChallenge()
         {
-            return new string[] { "value1", "value2" };
+            ChallengeDetailViewModel model = new ChallengeDetailViewModel()
+            {
+                 Title = "Title",
+                  Author= "Author", Description= "description", ImagesLink= "http://www.gettyimages.ca/gi-resources/images/Homepage/Category-Creative/UK/UK_Creative_462809583.jpg",
+                Latitude =50 , Longitude=50, PostId= 5, Stories= new List<StoryListItemViewModel>() { new StoryListItemViewModel() { StoryId = 1, Title="Story title" }, new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } , new StoryListItemViewModel() { StoryId = 1, Title = "Story title" } },
+                Tags = new string[] { "tag", "tag", "tag" }
+            };
+            return Json(model);
         }
 
         [Route("GetChallengeStories")]
