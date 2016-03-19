@@ -52,7 +52,32 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function ($scope, $stateParams) {
+.controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('mainCtrl', function ($scope) {
+	$scope.postList = [
+		{
+			Title: "Aasdasd",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink : "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{Title: "abc", Id: "123"}]
+		},
+		{
+			Title: "Aasdas",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{ Title: "abc", Id: "123" }]
+		},
+		{
+			Title: "Aasdas",
+			Tags: ["hash1", "hash2", "hash3"],
+			Author: "as",
+			ImageLink: "https://aquaworld.com.mx/en/wp-content/uploads/sites/2/2015/12/diving-in-cancun-tour.jpg",
+			Stories: [{ Title: "abc", Id: "123" }]
+		}, ];
 })
 
 .controller('SearchCtrl', function ($scope) {
@@ -70,6 +95,25 @@ angular.module('starter.controllers', [])
   ];
 
   $scope.tags.search = function () { console.log("search") };
+})
+
+.controller('MapCtrl', function ($scope, $state) {
+  var options = { timeout: 10000, enableHighAccuracy: true };
+
+  function pos() {
+
+    var latLng = new google.maps.LatLng(55.7558260, 37.6173000);
+
+    var mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  };
+  pos();
 });
 
 
