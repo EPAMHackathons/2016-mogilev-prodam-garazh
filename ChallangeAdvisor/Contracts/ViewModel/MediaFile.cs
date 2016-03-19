@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-    class MediaFile
-    {
-        public int? Id { get; set; }
-        public int Link { get; set; }
-    }
+	class MediaFile
+	{
+		public int? Id { get; set; }
+		public int Link { get; set; }
+	}
 }

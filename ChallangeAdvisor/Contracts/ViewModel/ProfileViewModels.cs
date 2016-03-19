@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-    class ProfileViewModels
-    {
-    }
+	class ProfileViewModels
+	{
+	}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-    class StoryListItemViewModel
+    public class StoryListItemViewModel
     {
     }
 }
