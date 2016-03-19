@@ -49,16 +49,49 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	  		}
 	  	}
 	  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    
+  	  .state('app.story', {
+	  	url: '/story',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/story.html'
+	  		}
+	  	}
+	  })
+  
+    .state('app.profile', {
+	  	url: '/profile',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/profile.html'
+	  		}
+	  	}
+	  })
+      .state('app.challenge', {
+      	url: '/challenge',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/challenge.html'
+	  		}
+	  	}
+	  })
+      .state('app.addChallenge', {
+      	url: '/addChallenge',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/addChallenge.html'
+	  		}
+	  	}
+	  })
+      .state('app.addStory', {
+      	url: '/addStory',
+	  	views: {
+	  		'menuContent': {
+	  			templateUrl: 'templates/addStory.html'
+	  		}
+	  	}
+	  })
+  
+  
     .state('app.playlists', {
       url: '/playlists',
       views: {

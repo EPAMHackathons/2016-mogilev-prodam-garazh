@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -14,7 +14,7 @@
     <RootNamespace>Client</RootNamespace>
     <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -57,6 +57,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="www\templates\addChallenge.html" />
+    <Content Include="www\templates\addStory.html" />
+    <Content Include="www\templates\challenge.html" />
+    <Content Include="www\templates\profile.html" />
+    <Content Include="www\templates\story.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -64,6 +69,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <Content Include="www\js\mainController.js" />
+    <Content Include="www\js\storyController.js" />
     <Content Include="www\README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -73,7 +79,6 @@
     <Content Include="www\index.html" />
     <Content Include="www\js\app.js" />
     <Content Include="www\js\controllers.js" />
-    <Content Include="www\templates\browse.html" />
     <Content Include="www\templates\login.html" />
     <Content Include="www\templates\main.html" />
     <Content Include="www\templates\menu.html" />
@@ -99,7 +104,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2052</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:2052/</IISUrl>
+          <IISUrl>http://localhost/Client</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
