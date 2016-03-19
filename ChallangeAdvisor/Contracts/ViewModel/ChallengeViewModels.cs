@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Contracts.ViewModel
 {
-    class ChallengeBreifViewModel
+   public class ChallengeBreifViewModel
     {
         public string ImageLink { get; set; }
         public string Description { get; set; }
