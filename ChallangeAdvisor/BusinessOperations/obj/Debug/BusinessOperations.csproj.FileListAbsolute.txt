@@ -1,0 +1,5 @@
+D:\ChallengeAdvisor\ChallangeAdvisor\BusinessOperations\bin\Debug\BusinessOperations.dll
+D:\ChallengeAdvisor\ChallangeAdvisor\BusinessOperations\bin\Debug\BusinessOperations.pdb
+D:\ChallengeAdvisor\ChallangeAdvisor\BusinessOperations\obj\Debug\BusinessOperations.csprojResolveAssemblyReference.cache
+D:\ChallengeAdvisor\ChallangeAdvisor\BusinessOperations\obj\Debug\BusinessOperations.dll
+D:\ChallengeAdvisor\ChallangeAdvisor\BusinessOperations\obj\Debug\BusinessOperations.pdb
