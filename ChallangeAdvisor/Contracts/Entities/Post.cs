@@ -13,16 +13,23 @@ namespace Contracts.Entities
 
 		public string Title { get; set; }
 
+		public string Text { get; set; }
+
 		public bool Approved { get; set; }
 
+		public string ImageLink { get; set; }
+
 		public User Author { get; set; }
-
-		public IList<Story> Stories { get; set; }
-
 
 		public double Latitude { get; set; }
 
 		public double Longitude { get; set; }
+
+		public IList<Tag> Tags { get; set; }
+
+		public IList<Story> Stories { get; set; }
+
+		public IList<PostTag> PostsTags { get; set; }
 
 	}
 }
