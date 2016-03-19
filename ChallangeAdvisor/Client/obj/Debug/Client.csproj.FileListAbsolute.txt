@@ -1,0 +1,6 @@
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\bin\Client.dll.config
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\bin\Client.dll
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\bin\Client.pdb
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\obj\Debug\Client.dll
+D:\ChallengeAdvisor\ChallangeAdvisor\Client\obj\Debug\Client.pdb
